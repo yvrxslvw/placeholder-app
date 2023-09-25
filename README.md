@@ -98,3 +98,7 @@ src/ ──┐
        |
        ├ widgets/ - Main application entry point
 ```
+
+## Authors
+
+- [@yvrxslvw](https://github.com/yvrxslvw)
