@@ -1,0 +1,8 @@
+# node modules folder
+/node_modules
+
+# build output folder
+/placeholder-app
+
+# VSCode settings folder
+/.vscode

@@ -1,0 +1,28 @@
+.heading {
+	font-weight: 700;
+
+	&.level-1 {
+		font-size: 30px;
+	}
+
+	&.level-2 {
+		font-size: 28px;
+	}
+
+	&.level-3 {
+		font-size: 26px;
+	}
+
+	&.level-4 {
+		font-size: 24px;
+	}
+
+	&.level-5 {
+		font-size: 20px;
+	}
+}
+
+.text {
+	font-size: 20px;
+	font-weight: 500;
+}

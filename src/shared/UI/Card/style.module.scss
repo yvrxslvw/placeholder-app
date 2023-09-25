@@ -1,0 +1,9 @@
+@use '@styles' as *;
+
+.card {
+	padding: 10px 20px;
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: rgba($color: $accent-color, $alpha: 0.3);
+	margin: 15px 0px;
+}

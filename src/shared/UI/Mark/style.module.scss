@@ -1,0 +1,12 @@
+@use '@styles' as *;
+
+.mark {
+	background-color: $red-color;
+	padding: 5px;
+	border-radius: 20px;
+	transition: all 0.4s ease-in-out;
+
+	&.success {
+		background-color: $green-color;
+	}
+}
