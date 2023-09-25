@@ -96,7 +96,7 @@ src/ ──┐
        |                   ├ models/ - Segment models & stores
        |                   ├ UI/ - Segment UI-library
        |
-       ├ widgets/ - Main application entry point
+       ├ index.tsx - Main application entry point
 ```
 
 ## Authors
