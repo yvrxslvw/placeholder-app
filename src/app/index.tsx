@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './style.scss';
+import '@styles';
 import { MainPage } from 'pages';
 import { withProviders } from './providers';
 
