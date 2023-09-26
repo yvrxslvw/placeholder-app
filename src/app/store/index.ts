@@ -7,5 +7,5 @@ export const store = configureStore({
 	// middleware: getDefaultMiddleware => getDefaultMiddleware().concat(todosApi.middleware),
 });
 
+export type rootState = ReturnType<typeof store.getState>;
 export * from './rootAction';
-export * from './types';

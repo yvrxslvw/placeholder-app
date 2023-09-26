@@ -1,7 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { todosSlice } from 'widgets';
+import { Todos } from 'widgets';
 
 export const rootReducer = combineReducers({
 	// [todosApi.reducerPath]: todosApi.reducer,
-	todosList: todosSlice.reducer,
+	todosList: Todos.reducer,
 });

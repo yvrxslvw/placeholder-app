@@ -5,6 +5,5 @@ import { rootAction } from 'app';
 
 export const useActions = () => {
 	const dispatch = useDispatch();
-
 	return useMemo(() => bindActionCreators(rootAction, dispatch), [dispatch]);
 };

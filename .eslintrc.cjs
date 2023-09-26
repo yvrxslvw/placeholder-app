@@ -19,6 +19,8 @@ module.exports = {
 		indent: [2, 'tab'],
 		'react-refresh/only-export-components': 0,
 		'eol-last': 2,
-		'no-multiple-empty-lines': [2, { "max": 1, "maxEOF": 0 }],
+		'no-multiple-empty-lines': [2, { max: 1, maxEOF: 0 }],
+		'react-hooks/exhaustive-deps': 0,
+		'@typescript-eslint/no-unused-vars': 0,
 	},
 };

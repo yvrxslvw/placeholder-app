@@ -1,2 +1,1 @@
-export * from './todos.slice';
-export * from '../api/getTodos';
+export * from './todos';

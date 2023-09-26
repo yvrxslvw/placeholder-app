@@ -1,2 +1,2 @@
 // export * from './getTodos_deprecated';
-export * from './getTodos';
+export { getTodos } from './getTodos';

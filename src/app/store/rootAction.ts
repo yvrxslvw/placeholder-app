@@ -1,6 +1,6 @@
-import { todosSlice, getTodos } from 'widgets';
+import { Todos } from 'widgets';
 
 export const rootAction = {
-	...todosSlice.actions,
-	getTodos
+	...Todos.actions,
+	getTodos: Todos.getTodos,
 };
