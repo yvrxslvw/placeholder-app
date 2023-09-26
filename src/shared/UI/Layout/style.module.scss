@@ -5,13 +5,9 @@
 	min-height: 100vh;
 	overflow: hidden;
 	background-color: $page-bg-color;
+}
 
-	.container {
-		width: 1144px;
-		margin: 0px auto;
-
-		.title {
-			margin: 25px 0px;
-		}
-	}
+.container {
+	width: 1144px;
+	margin: 0px auto;
 }
