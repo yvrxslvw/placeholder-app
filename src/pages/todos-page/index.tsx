@@ -3,7 +3,7 @@ import s from './style.module.scss';
 import { Container, Heading, Layout } from 'shared';
 import { TodoList } from 'widgets';
 
-export const MainPage: FC = () => {
+export const TodosPage: FC = () => {
 	return (
 		<Layout>
 			<Container>
