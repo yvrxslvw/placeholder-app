@@ -1,13 +1,17 @@
 import { FC } from 'react';
-import { Button, useActions, useAppSelector } from 'shared';
+import { Button, useActions } from 'shared';
 
 interface TodoCompleteButtonProps {
 	todoId: number;
+	completed: boolean;
 }
 
-export const TodoCompleteButton: FC<TodoCompleteButtonProps> = ({ todoId }) => {
-	const { completed } = useAppSelector(state => state.todosList.todos[todoId]);
+export const TodoCompleteButton: FC<TodoCompleteButtonProps> = ({ todoId, completed }) => {
 	const { toggleCompletedById } = useActions();
 
-	return <Button onClick={() => toggleCompletedById(todoId)}>Mark as {completed ? 'uncompleted' : 'completed'}</Button>;
+	const onClickHandler = () => {
+		toggleCompletedById(todoId);
+	};
+
+	return <Button onClick={onClickHandler}>Mark as {completed ? 'uncompleted' : 'completed'}</Button>;
 };

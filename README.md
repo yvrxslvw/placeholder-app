@@ -2,7 +2,7 @@
 
 This application was created to self-improve some techniques such as:
 * [Feature-Sliced Design](https://feature-sliced.design)
-* [Redux Toolkit & RTK Query](https://redux-toolkit.js.org)
+* [Redux Toolkit](https://redux-toolkit.js.org)
 
 The application is based on the service [jsonPlaceholder](https://jsonplaceholder.typicode.com) using some mock data to complete pages.
 
@@ -12,7 +12,6 @@ The application is based on the service [jsonPlaceholder](https://jsonplaceholde
 * React
 * TypeScript
 * Sass
-* Axios (for dynamic data in the store)
 * Redux Toolkit
 * Classnames
 * Compose-function
@@ -68,16 +67,13 @@ src/ ──┐
        |        |
        |        ├ index.ts - Slice provider
        |        ├ page/ ┐
-       |        |       |
-       |        |       ├ index.tsx - Page UI
-       |        |       ├ style.module.scss - Page styles
-       |        |       
-       |        ├ .../  ┐
+       |                |
+       |                ├ index.tsx - Page UI
+       |                ├ style.module.scss - Page styles
        |
        ├ shared/ ┐ - Reusable functionality
        |         |
        |         ├ index.ts/ - Slice provider
-       |         ├ api/ - API instances
        |         ├ assets/ - Static elements like images, icons etc
        |         ├ constants/ - Constants
        |         ├ hooks/ - Hooks

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import s from './style.module.scss';
 import { Container, Heading, Layout } from 'shared';
-import { CardList } from 'widgets';
+import { TodoList } from 'widgets';
 
 export const MainPage: FC = () => {
 	return (
@@ -10,7 +10,7 @@ export const MainPage: FC = () => {
 				<Heading level={2} className={s.title}>
 					Todo list:
 				</Heading>
-				<CardList />
+				<TodoList />
 			</Container>
 		</Layout>
 	);
