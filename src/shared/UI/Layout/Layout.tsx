@@ -1,12 +1,14 @@
 import { FC, PropsWithChildren } from 'react';
 import s from './style.module.scss';
+import { Header } from './Header';
+import { Footer } from './Footer';
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<div className={s.wrapper}>
-			<header></header>
+			<Header />
 			<main>{children}</main>
-			<footer></footer>
+			<Footer />
 		</div>
 	);
 };
