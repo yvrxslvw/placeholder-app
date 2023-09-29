@@ -8,11 +8,15 @@ export const todosApi = createApi({
 		baseUrl: jsonPlaceHolder_URL,
 	}),
 	endpoints: builder => ({
-		getTodos: builder.query<ITodo[], null>({
-			query: () => ({
+		getTodos: builder.query<{ todos: ITodo[]; totalCount: number }, { _limit: number; _page: number }>({
+			query: params => ({
 				url: `/todos`,
 				method: 'GET',
+				params: { ...params },
 			}),
+			transformResponse: (todos: ITodo[], meta) => {
+				return { todos, totalCount: Number(meta?.response?.headers.get('x-total-count')) };
+			},
 		}),
 	}),
 });

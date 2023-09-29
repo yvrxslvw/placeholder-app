@@ -5,10 +5,12 @@ import { todosApi } from 'widgets';
 
 export interface TodosState {
 	todos: ITodo[];
+	totalCount: number;
 }
 
 const initialState: TodosState = {
 	todos: [],
+	totalCount: 0,
 };
 
 const todosSlice = createSlice({

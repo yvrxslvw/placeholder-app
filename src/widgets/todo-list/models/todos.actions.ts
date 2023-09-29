@@ -6,6 +6,11 @@ export const toggleCompletedById = (state: CombinedState<TodosState>, action: Pa
 	state.todos[action.payload].completed = !state.todos[action.payload].completed;
 };
 
-export const todosApiFulfilled = (state: CombinedState<TodosState>, action: PayloadAction<ITodo[]>) => {
-	state.todos = action.payload;
+export const todosApiFulfilled = (
+	state: CombinedState<TodosState>,
+	action: PayloadAction<{ todos: ITodo[]; totalCount: number }>,
+) => {
+	state.todos.push(...action.payload.todos);
+	state.totalCount = action.payload.totalCount;
+	state.todos.sort((first, second) => first.id - second.id);
 };
