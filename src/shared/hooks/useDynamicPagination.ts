@@ -1,4 +1,5 @@
-import { useState, useEffect, Dispatch, SetStateAction } from 'react';
+import { useState, useEffect } from 'react';
+import { ActionCreatorWithoutPayload } from '@reduxjs/toolkit';
 
 /**
  * Custom hook that asynchronously loads elements from the server on scroll.
@@ -6,7 +7,7 @@ import { useState, useEffect, Dispatch, SetStateAction } from 'react';
  * @param totalCount Total number of items at endpoint (usually header "x-total-count" is used for this)
  * @param limit Limit of items per request
  * @param page Current page state
- * @param setNextPage Change current page method
+ * @param setNextPage Change current page action creator
  * @returns Object with next request loading state
  */
 export const useDynamicPagination = (
@@ -14,7 +15,7 @@ export const useDynamicPagination = (
 	totalCount: number,
 	limit: number,
 	page: number,
-	setNextPage: Dispatch<SetStateAction<number>>,
+	setNextPage: ActionCreatorWithoutPayload,
 ) => {
 	const [requesting, setRequesting] = useState(false);
 	const [isPaginationLoading, setIsPaginationLoading] = useState(false);
@@ -43,7 +44,7 @@ export const useDynamicPagination = (
 
 	useEffect(() => {
 		if (requesting && !isLimited) {
-			setNextPage(prev => prev + 1);
+			setNextPage();
 			setIsPaginationLoading(true);
 		}
 	}, [requesting]);

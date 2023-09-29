@@ -6,6 +6,10 @@ export const toggleCompletedById = (state: CombinedState<TodosState>, action: Pa
 	state.todos[action.payload].completed = !state.todos[action.payload].completed;
 };
 
+export const nextPage = (state: CombinedState<TodosState>) => {
+	state.page++;
+};
+
 export const todosApiFulfilled = (
 	state: CombinedState<TodosState>,
 	action: PayloadAction<{ todos: ITodo[]; totalCount: number }>,
