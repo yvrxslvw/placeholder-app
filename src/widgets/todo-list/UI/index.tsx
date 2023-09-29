@@ -1,10 +1,10 @@
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { Loader, Text, useAppSelector } from 'shared';
 import { TodoCard } from 'entities';
 import { TodoCompleteButton } from 'features';
 import { useGetTodosQuery } from '../api/todosApi';
 
-export const TodoList: FC = memo(() => {
+export const TodoList: FC = () => {
 	const { isError, isLoading } = useGetTodosQuery(null);
 	const { todos } = useAppSelector(state => state.todosList);
 
@@ -27,4 +27,4 @@ export const TodoList: FC = memo(() => {
 			)}
 		</>
 	);
-});
+};

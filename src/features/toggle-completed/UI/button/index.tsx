@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { Button, useActions } from 'shared';
 
 interface TodoCompleteButtonProps {
@@ -6,7 +6,7 @@ interface TodoCompleteButtonProps {
 	completed: boolean;
 }
 
-export const TodoCompleteButton: FC<TodoCompleteButtonProps> = ({ todoId, completed }) => {
+export const TodoCompleteButton: FC<TodoCompleteButtonProps> = memo(({ todoId, completed }) => {
 	const { toggleCompletedById } = useActions();
 
 	const onClickHandler = () => {
@@ -14,4 +14,4 @@ export const TodoCompleteButton: FC<TodoCompleteButtonProps> = ({ todoId, comple
 	};
 
 	return <Button onClick={onClickHandler}>Mark as {completed ? 'uncompleted' : 'completed'}</Button>;
-};
+});
