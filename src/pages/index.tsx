@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { PublicRoutes } from './routes';
-import { Layout } from 'shared';
+import { Layout, ROUTER_PATHS } from 'shared';
 
 export const Routing: FC = () => {
 	return (
@@ -11,7 +11,7 @@ export const Routing: FC = () => {
 					<Route element={<Element />} path={path} key={path} />
 				))}
 
-				<Route element={<Navigate to='/todos' replace />} path='/*' />
+				<Route element={<Navigate to={ROUTER_PATHS.main} replace />} path='/*' />
 			</Routes>
 		</Layout>
 	);
