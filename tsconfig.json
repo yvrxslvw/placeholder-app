@@ -18,20 +18,9 @@
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true,
-
-		/* Path aliases */
-		"baseUrl": "src",
-		"paths": {
-			"app": ["./app"],
-			"shared": ["./shared"],
-			"pages": ["./pages"],
-			"widgets": ["./widgets"],
-			"entities": ["./entities"],
-			"features": ["./features"],
-			"@styles": ["./shared/styles/index.scss"]
-		}
+		"noFallthroughCasesInSwitch": true
 	},
 	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+	"references": [{ "path": "./tsconfig.node.json" }],
+	"extends": ["./tsconfig.paths.json"]
 }

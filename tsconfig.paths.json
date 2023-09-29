@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		/* Path aliases */
+		"baseUrl": "src",
+		"paths": {
+			"app": ["./app"],
+			"shared": ["./shared"],
+			"pages": ["./pages"],
+			"widgets": ["./widgets"],
+			"entities": ["./entities"],
+			"features": ["./features"],
+			"@styles": ["./shared/styles/index.scss"]
+		}
+	}
+}
