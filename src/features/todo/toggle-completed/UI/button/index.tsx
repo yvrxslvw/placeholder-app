@@ -7,10 +7,10 @@ interface TodoCompleteButtonProps {
 }
 
 export const TodoCompleteButton: FC<TodoCompleteButtonProps> = ({ todoId, completed }) => {
-	const { toggleCompletedById } = useActions();
+	const { toggleCompleted } = useActions();
 
 	const onClickHandler = () => {
-		toggleCompletedById(todoId);
+		toggleCompleted(todoId);
 	};
 
 	return <Button onClick={onClickHandler}>Mark as {completed ? 'uncompleted' : 'completed'}</Button>;

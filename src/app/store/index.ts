@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { rootReducer } from './rootReducer';
-import { todosApi } from 'widgets';
+import { todoApi } from 'shared';
 
 export const store = configureStore({
 	reducer: rootReducer,
-	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(todosApi.middleware),
+	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(todoApi.middleware),
 });
 
 export type rootState = ReturnType<typeof store.getState>;

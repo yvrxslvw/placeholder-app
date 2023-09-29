@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import { Loader, Text } from 'shared';
+import { Loader, Text, getTodoList } from 'shared';
 import { TodoCard } from 'entities';
 import { TodoCompleteButton } from 'features';
-import { usePagination } from '../lib';
+import { usePagination } from 'widgets/todo/lib';
 
 export const TodoList: FC = () => {
-	const { isError, isLoading, isPaginationLoading, todos } = usePagination();
+	const { isError, isLoading, isPaginationLoading, entries } = usePagination();
 
 	return (
 		<>
@@ -14,13 +14,11 @@ export const TodoList: FC = () => {
 			) : isError ? (
 				<Text>An unexpected error occurred... :(</Text>
 			) : (
-				todos &&
-				todos.length > 0 &&
-				todos.map(todo => (
+				getTodoList(entries).map(todo => (
 					<TodoCard
-						todo={todo}
 						key={todo.id}
-						toggleButton={<TodoCompleteButton todoId={todo.id - 1} completed={todo.completed} />}
+						todo={todo}
+						toggleButton={<TodoCompleteButton todoId={todo.id} completed={todo.completed} />}
 					/>
 				))
 			)}

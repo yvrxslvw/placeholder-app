@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { jsonPlaceHolder_URL, ITodo } from 'shared';
 
-export const todosApi = createApi({
+export const todoApi = createApi({
 	reducerPath: 'api/todos',
 	tagTypes: ['TodoList'],
 	baseQuery: fetchBaseQuery({
@@ -21,4 +21,4 @@ export const todosApi = createApi({
 	}),
 });
 
-export const { useGetTodosQuery } = todosApi;
+export const { useGetTodosQuery } = todoApi;

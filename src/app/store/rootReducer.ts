@@ -1,7 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { Todos, todosApi } from 'widgets';
+import { Todo } from 'entities';
+import { todoApi } from 'shared';
 
 export const rootReducer = combineReducers({
-	[todosApi.reducerPath]: todosApi.reducer,
-	todosList: Todos.reducer,
+	[todoApi.reducerPath]: todoApi.reducer,
+	todo: Todo.reducer,
 });

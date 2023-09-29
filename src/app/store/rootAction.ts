@@ -1,5 +1,5 @@
-import { Todos } from 'widgets';
+import { Todo } from 'entities';
 
 export const rootAction = {
-	...Todos.actions,
+	...Todo.actions,
 };
