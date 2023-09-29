@@ -35,49 +35,49 @@ yarn dev
 
 ```
 └── src/
-		├── app/									# LAYER: Application entry point
-		|		 ├── providers/				# Providers, e.g. router, store, etc...
-		|	 	 ├── store/						#	Global application store
-		|	 	 ├── index.tsx				# Entry component with providers
-		|	 	 └── types.d.ts				# Some types
-		|
-		├── entities/							# LAYER: Business-entities with some logic
-		|	 	 ├── todo/						# SLICE: One todo-card
-		|		 |		├── model/			# SEGMENT: Redux slice and actions
-		|		 |		├── UI/					# SEGMENT: Todo-card UI-component
-		|		 |		└── index.ts		# Slice provider
-		|	 	 └── index.ts					# Entities provider
-		|
-		├── features/							# LAYER: Some actions with entities
-		|	 	 ├── todo/						# SLICE: Toggle todo-completed button
-		|	 	 |		├── UI/					# SEGMENT: Todo-completed button UI-component
-		|		 |		└── index.ts		# Slice provider
-		|	 	 └── index.ts					# Features provider
-		|
-		├── pages/								# LAYER: Application pages
-		|	 	 ├── main-page/				#	Main page
-		|	 	 ├── todos-page/			# Todos page
-		|	 	 ├── index.tsx				# Router component
-		|	 	 └── routes.tsx				# Route array
-		|
-		├── shared/								# LAYER: Reused components, functions, hooks, etc...
-		|	 	 ├── api/							# API models for each entity
-		|	 	 ├── constants/				# Some global constants
-		|	 	 ├── helpers/					# Some global helper-functions
-		|	 	 ├── hooks/						# Some global hooks
-		|	 	 ├── models/					# Some global models
-		|	 	 ├── styles/					# Global styles and style-variables
-		|	 	 ├── UI/							# Global UI-library
-		|	 	 └── index.ts					# Shared provider
-		|
-		├── widgets/							# LAYER: Full blocks for inserting to some page
-		|	 	 ├── todo/						# SLICE: Todos block
-		|		 |		├── lib/				# SEGMENT: Some helpers
-		|		 |		├── UI/					# SEGMENT: Block UI-component
-		|		 |		└── index.ts		# Slice provider
-		|	 	 └── index.ts					# Widgets provider
-		|
-		└── index.tsx							# Rendering the application
+    ├── app/                 # LAYER: Application entry point
+    |     ├── providers/     # Providers, e.g. router, store, etc...
+    |     ├── store/         #  Global application store
+    |     ├── index.tsx      # Entry component with providers
+    |     └── types.d.ts     # Some types
+    |
+    ├── entities/            # LAYER: Business-entities with some logic
+    |     ├── todo/          # SLICE: One todo-card
+    |     |    ├── model/    # SEGMENT: Redux slice and actions
+    |     |    ├── UI/       # SEGMENT: Todo-card UI-component
+    |     |    └── index.ts  # Slice provider
+    |     └── index.ts       # Entities provider
+    |
+    ├── features/            # LAYER: Some actions with entities
+    |     ├── todo/          # SLICE: Toggle todo-completed button
+    |     |    ├── UI/       # SEGMENT: Todo-completed button UI-component
+    |     |    └── index.ts  # Slice provider
+    |     └── index.ts       # Features provider
+    |
+    ├── pages/               # LAYER: Application pages
+    |     ├── main-page/     #  Main page
+    |     ├── todos-page/    # Todos page
+    |     ├── index.tsx      # Router component
+    |     └── routes.tsx     # Route array
+    |
+    ├── shared/              # LAYER: Reused components, functions, hooks, etc...
+    |     ├── api/           # API models for each entity
+    |     ├── constants/     # Some global constants
+    |     ├── helpers/       # Some global helper-functions
+    |     ├── hooks/         # Some global hooks
+    |     ├── models/        # Some global models
+    |     ├── styles/        # Global styles and style-variables
+    |     ├── UI/            # Global UI-library
+    |     └── index.ts       # Shared provider
+    |
+    ├── widgets/             # LAYER: Full blocks for inserting to some page
+    |     ├── todo/          # SLICE: Todos block
+    |     |    ├── lib/      # SEGMENT: Some helpers
+    |     |    ├── UI/       # SEGMENT: Block UI-component
+    |     |    └── index.ts  # Slice provider
+    |     └── index.ts       # Widgets provider
+    |
+    └── index.tsx            # Rendering the application
 ```
 
 ## Authors
