@@ -8,4 +8,3 @@ export const store = configureStore({
 });
 
 export type rootState = ReturnType<typeof store.getState>;
-export * from './rootAction';
