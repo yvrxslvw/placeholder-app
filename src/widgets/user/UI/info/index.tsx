@@ -8,7 +8,7 @@ export const UserInfo: FC = () => {
 	const { entries } = useAppSelector(state => state.user);
 	const user = entries[userId];
 
-	if (!user) return <Navigate to={ROUTER_PATHS.main} replace />;
+	if (!user) return <Navigate to={ROUTER_PATHS.users} replace />;
 
 	return (
 		<Card className={s.userInfo}>

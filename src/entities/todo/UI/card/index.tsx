@@ -5,9 +5,10 @@ import s from './style.module.scss';
 interface TodoCardProps {
 	todo: ITodo;
 	toggleButton: ReactNode;
+	author: ReactNode;
 }
 
-export const TodoCard: FC<TodoCardProps> = ({ todo, toggleButton }) => {
+export const TodoCard: FC<TodoCardProps> = ({ todo, toggleButton, author }) => {
 	return (
 		<Card className={s.todoCard}>
 			<Heading level={4} className={s.title}>
@@ -18,6 +19,7 @@ export const TodoCard: FC<TodoCardProps> = ({ todo, toggleButton }) => {
 			</Heading>
 			<Text className={s.text}>{todo.title}</Text>
 			{toggleButton}
+			{author}
 		</Card>
 	);
 };
