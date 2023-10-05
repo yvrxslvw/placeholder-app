@@ -1,19 +1,24 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import s from './style.module.scss';
-import { Card, Heading, IUser } from 'shared';
+import { Card, Heading, IUser, ROUTER_PATHS } from 'shared';
+import { useNavigate } from 'react-router-dom';
 
 interface UserCardProps {
 	user: IUser;
-	link: ReactNode;
 }
 
-export const UserCard: FC<UserCardProps> = ({ user, link }) => {
+export const UserCard: FC<UserCardProps> = ({ user }) => {
+	const navigate = useNavigate();
+
+	const onClickHandler = () => {
+		navigate(ROUTER_PATHS.users + '/' + user.id);
+	};
+
 	return (
-		<Card>
-			<Heading level={2} className={s.title}>
+		<Card className={s.userCard} onClick={onClickHandler}>
+			<Heading level={2}>
 				User #{user.id}: {user.username}
 			</Heading>
-			{link}
 		</Card>
 	);
 };

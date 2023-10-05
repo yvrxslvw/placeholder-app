@@ -1,12 +1,15 @@
 import { FC } from 'react';
 import s from './style.module.scss';
-import { Card, Heading, IUser, Text } from 'shared';
+import { Card, Heading, ROUTER_PATHS, Text, useAppSelector } from 'shared';
+import { Navigate, useLocation } from 'react-router-dom';
 
-interface UserInfoProps {
-	user: IUser;
-}
+export const UserInfo: FC = () => {
+	const userId = Number(useLocation().pathname.slice(7));
+	const { entries } = useAppSelector(state => state.user);
+	const user = entries[userId];
 
-export const UserInfo: FC<UserInfoProps> = ({ user }) => {
+	if (!user) return <Navigate to={ROUTER_PATHS.main} replace />;
+
 	return (
 		<Card className={s.userInfo}>
 			<Text className={s.item}>ID: {user.id}</Text>

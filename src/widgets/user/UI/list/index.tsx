@@ -1,5 +1,4 @@
 import { UserCard } from 'entities';
-import { UserLink } from 'features';
 import { FC } from 'react';
 import { Loader, Text, getUserList, useAppSelector, useGetUsersQuery } from 'shared';
 
@@ -14,7 +13,7 @@ export const UserList: FC = () => {
 			) : isError ? (
 				<Text>An unexpected error occurred... :(</Text>
 			) : (
-				getUserList(entries).map(user => <UserCard user={user} link={<UserLink userId={user.id} />} />)
+				getUserList(entries).map(user => <UserCard user={user} key={user.id} />)
 			)}
 		</>
 	);
