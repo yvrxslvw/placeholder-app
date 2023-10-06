@@ -3,4 +3,5 @@ export const enum ROUTER_PATHS {
 	todos = '/todos',
 	users = '/users',
 	user = '/users/:id',
+	posts = '/posts',
 }

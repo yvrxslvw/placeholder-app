@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { ITodo, todoApi } from 'shared';
-import { nextPage, todoApiFulfilled, toggleCompleted } from './todo.actions';
+import { nextTodoPage, todoApiFulfilled, toggleCompleted } from './todo.actions';
 
 export interface TodoState {
 	entries: Record<number, ITodo>;
@@ -19,7 +19,7 @@ const todoSlice = createSlice({
 	initialState,
 	reducers: {
 		toggleCompleted,
-		nextPage,
+		nextTodoPage,
 	},
 	extraReducers: builder => {
 		builder.addMatcher(todoApi.endpoints.getTodos.matchFulfilled, todoApiFulfilled);

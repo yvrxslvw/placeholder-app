@@ -4,6 +4,7 @@ import { TodosPage } from './todos-page';
 import { MainPage } from './main-page';
 import { UsersPage } from './users-page/users-list';
 import { UserInfoPage } from './users-page/user-info';
+import { PostsPage } from './posts-page';
 
 interface IRoute {
 	Element: FC;
@@ -15,4 +16,5 @@ export const PublicRoutes: IRoute[] = [
 	{ Element: MainPage, path: ROUTER_PATHS.main },
 	{ Element: UsersPage, path: ROUTER_PATHS.users },
 	{ Element: UserInfoPage, path: ROUTER_PATHS.user },
+	{ Element: PostsPage, path: ROUTER_PATHS.posts },
 ];

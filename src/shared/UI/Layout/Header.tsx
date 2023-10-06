@@ -18,6 +18,9 @@ export const Header: FC = () => {
 					<Link to={ROUTER_PATHS.users} className={s.link}>
 						Users
 					</Link>
+					<Link to={ROUTER_PATHS.posts} className={s.link}>
+						Posts
+					</Link>
 				</div>
 			</Container>
 		</header>

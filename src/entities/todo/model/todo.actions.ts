@@ -6,7 +6,7 @@ export const toggleCompleted = (state: CombinedState<TodoState>, action: Payload
 	state.entries[action.payload].completed = !state.entries[action.payload].completed;
 };
 
-export const nextPage = (state: CombinedState<TodoState>) => {
+export const nextTodoPage = (state: CombinedState<TodoState>) => {
 	state.currentPage++;
 };
 
